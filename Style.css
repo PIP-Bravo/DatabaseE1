@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+.main {
+    width: 100%;
+    min-height: 100vh; /* Set to full viewport height */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    padding-top: 50px; /* Added padding to push the content down */
+}
+
+/* Background video styling */
+.backvid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height of the parent container */
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navigation Bar */
+.navigasi {
+    width: 100%;
+    max-width: 1540px;
+    height: 75px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Make the navbar slightly transparent */
+    z-index: 10;
+}
+
+/* Navigation title */
+.judul {
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-family: Copperplate, Papyrus, fantasy;
+    padding-left: 20px;
+}
+
+/* Navigation Menu */
+.menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 40px;
+}
+
+.menu ul li a {
+    padding: 5px 15px; 
+    background-color: transparent; 
+    border-radius: 10px; 
+    transition: all 0.3s ease; 
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.4s ease-in-out;
+}
+
+.menu ul li a:hover {
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Responsive content area */
+.content {
+    margin-top: 75px; /* Added margin to ensure it starts below the navbar */
+    padding-top: 50px; /* Additional padding for better centering */
+}
+
+.content h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    color: antiquewhite;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.content span{
+    color : rgb(161, 121, 68);
+    font-size: 60px;
+}
+
+.content p {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-family: 'fantasy';
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.cn {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+}
+
+.cn:hover {
+    background-color: #128C7E;
+}
+
+.cn ion-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* FAQ Section */
+.faq-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    border-radius: 10px;
+    color: antiquewhite;
+    font-family: 'Arial', sans-serif;
+    text-align: left; /* Align text to the left */
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.question h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: #25D366;
+    transition: transform 0.3s ease;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    font-size: 1.2rem;
+    color: #ddd;
+    padding-top: 10px;
+}
+
+.faq-item.active .answer {
+    max-height: 500px; /* Adjust based on content length */
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .navigasi ul li {
+        margin-left: 20px;
+    }
+
+    .menu ul li a {
+        font-size: 0.9rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content p {
+        font-size: 1.3rem;
+    }
+
+    .cn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigasi {
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+    }
+
+    .cn {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .judul {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .cn {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+
+    .cn ion-icon {
+        font-size: 18px;
+    }
+}
