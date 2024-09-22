@@ -195,6 +195,49 @@
     transform: rotate(180deg);
 }
 
+/* FAQ Form Styling */
+.faq-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px; /* Spasi antara form dan FAQ items */
+}
+
+.faq-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: antiquewhite;
+}
+
+.faq-form textarea::placeholder {
+    color: #ddd;
+}
+
+.faq-form button {
+    align-self: flex-end;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.faq-form button:hover {
+    background-color: #128C7E;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 1200px) {
     .navigasi ul li {
@@ -214,6 +257,15 @@
     }
 
     .cn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .faq-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .faq-form button {
         font-size: 0.9rem;
         padding: 8px 16px;
     }
@@ -246,6 +298,15 @@
         font-size: 0.8rem;
         padding: 8px 14px;
     }
+
+    .faq-form textarea {
+        font-size: 1rem;
+    }
+
+    .faq-form button {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -274,5 +335,14 @@
 
     .cn ion-icon {
         font-size: 18px;
+    }
+
+    .faq-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .faq-form button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
     }
 }

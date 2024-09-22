@@ -46,6 +46,12 @@
         <!-- FAQ Section -->
         <div class="faq-section">
             <h2>Kak, Kak Mau Nanya Dong...</h2>
+
+            <form action="add_comments.php" class="faq-form" method="POST">
+                <textarea name="comment" placeholder="Nanya disini boleh banget ya, pertanyaan yang dijawab nanti akan ditampilkan di sini..." required></textarea>
+                <button type="submit" name="submit">Kirim</button>
+            </form>
+
             <div class="faq">
                 <div class="faq-item">
                     <div class="question">
@@ -89,6 +95,11 @@
                 item.classList.toggle('active');
             });
         });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === '1') {
+            alert('Comment submitted successfully!');
+        }
     </script>
 
 </body>
